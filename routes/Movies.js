@@ -13,8 +13,11 @@ router.get("/",movieIndex);
 
 //For creating movies
 
-// C-CREATING
+// C-CREATING A MOVIE
 router.post("/",moviePost);
+
+// id,title,description
+
 
 // U -UPDATING
 router.put("/:id",moviePut);

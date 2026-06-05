@@ -3,14 +3,21 @@ export const movieIndex = (req, res) => {
 };
 
 export const moviePost = (req, res) => {
-  res.send("movie created");
+  // create the movie
+
+  // id ,title,desc
+
+  console.log(req.body);
+
+  res.json(req.body)
+
+  //   res.send("movie created");
 };
 
 export const moviePut = (req, res) => {
   res.send("movie data updated");
 };
 
-
-export const movieDelete =(req,res) => {
-    res.send("movie deleted")
-} 
+export const movieDelete = (req, res) => {
+  res.send("movie deleted");
+};

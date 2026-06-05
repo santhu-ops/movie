@@ -5,6 +5,13 @@ import connectDb from './lib/db.js'
 
 const app = express()
 const PORT = 4000
+
+// data understanding middleware
+// eppo la data backup la eruthu varuhtu apo etha middleware us epannum 
+
+app.use(express.json())
+
+//Connect  Db 
 connectDb()
 app.get('/',(req,res)=>{
     res.json({msg:"root file "})
@@ -23,6 +30,3 @@ app.listen(PORT,()=>{
     
 })
 
-// dry principle
-
-//kiss principle -->keep it simple, stupid
