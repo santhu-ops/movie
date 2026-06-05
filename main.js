@@ -1,10 +1,11 @@
 import express from 'express'
 import movieRoutes from './routes/Movies.js'
+import connectDb from './lib/db.js'
 
 
 const app = express()
 const PORT = 4000
-
+connectDb()
 app.get('/',(req,res)=>{
     res.json({msg:"root file "})
 
