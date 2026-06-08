@@ -4,7 +4,7 @@ import { model, Schema } from "mongoose";
 // write the schema
 
 
-const Schema=new Schema ({
+const UserSchema=new Schema ({
     title:String,
     desc:String,
 
@@ -14,6 +14,6 @@ const Schema=new Schema ({
 
 
 
-const movie=model("Movie",Schema)
+const movie=model("Movie",UserSchema)
 
 export default movie
