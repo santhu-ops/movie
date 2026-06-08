@@ -89,4 +89,25 @@ export const moviePut = async (req, res) => {
 };
 
 
-export const movieDelete = async (req,res)=>{}
+export const movieDelete = async (req,res)=>{
+
+
+
+   try{
+       const Deleted = await movie.findByIdAndDelete(req.params.id)
+       console.log(Deleted);
+
+       if(Deleted == null){
+        return res.status(404).json({msg:"cannot find the movie"})
+       }
+
+       else{
+        return res.json({msg:"deleted sussesfully"})
+       }
+       
+   }
+   catch(error){
+    return res.status(500).json({msg:error.message})
+   }
+
+}
