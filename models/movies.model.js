@@ -5,8 +5,16 @@ import { model, Schema } from "mongoose";
 
 
 const UserSchema=new Schema ({
-    title:String,
-    desc:String,
+    // way of validation data  
+    title:{
+        type:String,
+        required:true,
+        unique:true
+    },
+    desc:{
+        type:String,
+        required:true
+    }
 
 })
 
