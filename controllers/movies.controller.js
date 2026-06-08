@@ -6,12 +6,13 @@ export const moviePost = (req, res) => {
   // create the movie
 
   // id ,title,desc
+  // validate your data
+
+  //   res.send("movie created");
 
   console.log(req.body);
 
-  res.json(req.body)
-
-  //   res.send("movie created");
+  res.json(req.body);
 };
 
 export const moviePut = (req, res) => {
